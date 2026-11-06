@@ -103,9 +103,10 @@ python -m sphinx -b html doc orangecontrib/orange_gualbe_fs/_help/html
 ```
 
 `orangecontrib/orange_gualbe_fs/_help/` no se versiona en el control de
-código fuente: es un artefacto generado, igual que `dist/`. **Debe
-reconstruirse antes de cada `python -m build`** (si no, el paquete se
-publica con la documentación desactualizada o sin ella).
+código fuente: es un artefacto generado, igual que `dist/`. El workflow de
+publicación la reconstruye en cada release; en local solo hace falta
+regenerarla para probar la ayuda o para construir el paquete a mano (si no,
+el paquete se construye con la documentación desactualizada o sin ella).
 
 ## Mantenimiento y publicación en PyPI
 
@@ -115,28 +116,31 @@ Este repositorio (<https://github.com/gualbe/orange_gualbe_fs>) es la
 [PyPI](https://pypi.org/project/orange_gualbe_fs/) debe corresponder a un
 estado de `main` cuyo `version` en `pyproject.toml` sea el mismo número.
 
-Para publicar una versión nueva:
+### Publicar una versión nueva
 
-1. Subir `version` en `pyproject.toml` y hacer commit.
-2. Regenerar la ayuda, construir y comprobar el paquete:
+La publicación en PyPI es automática mediante
+[Trusted Publishing](https://docs.pypi.org/trusted-publishers/): al
+publicar una release en GitHub, el workflow
+`.github/workflows/publish.yml` genera la ayuda, construye el paquete,
+lo sube a PyPI (sin tokens) y adjunta los ficheros a la release. Así
+GitHub y PyPI no pueden quedar desincronizados.
 
-   ```bash
-   rm -rf dist
-   python -m sphinx -b html doc orangecontrib/orange_gualbe_fs/_help/html
-   python -m pip install --upgrade build twine
-   python -m build
-   twine check dist/*
-   ```
-
-3. Subirlo a PyPI y publicar el commit:
+1. Sube `version` en `pyproject.toml` y haz commit y push a `main`.
+2. Crea la release con una etiqueta `v` + la misma versión (por ejemplo
+   `v0.1.2`):
 
    ```bash
-   twine upload dist/*
-   git push origin main
+   gh release create vX.Y.Z --title "vX.Y.Z" --notes "Cambios de esta versión"
    ```
 
-`twine upload` usa las credenciales de `~/.pypirc` o te pide tu usuario
-(`__token__`) y tu API token de PyPI.
+El workflow rechaza la publicación si la etiqueta no coincide con la
+versión de `pyproject.toml`. Para validar la construcción sin publicar,
+lánzalo a mano desde la pestaña *Actions* (o con
+`gh workflow run publish.yml`).
+
+Como plan B, si GitHub Actions no estuviera disponible, se puede construir
+(`python -m build`, tras regenerar la ayuda como se explica arriba) y
+subir a mano con `twine upload dist/*`.
 
 ## Requisitos de los datos de entrada
 
