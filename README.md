@@ -89,16 +89,54 @@ a partir de los archivos en `doc/`. Cada widget tiene una página en
 `.. _filtro univariante:` para el widget `name = "Filtro Univariante"`) —
 así es como Orange encuentra la página correcta.
 
+El HTML generado se guarda **dentro del propio paquete**
+(`orangecontrib/orange_gualbe_fs/_help/html/`), no en `doc/build/`, para
+que la ayuda funcione también en instalaciones normales desde PyPI (no
+solo en modo editable) — se declara como `package-data` en
+`pyproject.toml` y viaja dentro del wheel.
+
 Para (re)generar la documentación tras editar o añadir un widget:
 
 ```bash
 pip install sphinx
-python -m sphinx -b html doc doc/build/html
+python -m sphinx -b html doc orangecontrib/orange_gualbe_fs/_help/html
 ```
 
-`doc/build/html/` no se versiona en el control de código fuente: es un
-artefacto generado, igual que `dist/`. Debe reconstruirse cada vez que se
-edite un archivo `.rst` en `doc/widgets/`.
+`orangecontrib/orange_gualbe_fs/_help/` no se versiona en el control de
+código fuente: es un artefacto generado, igual que `dist/`. **Debe
+reconstruirse antes de cada `python -m build`** (si no, el paquete se
+publica con la documentación desactualizada o sin ella).
+
+## Mantenimiento y publicación en PyPI
+
+Este repositorio (<https://github.com/gualbe/orange_gualbe_fs>) es la
+**fuente de verdad** del add-on: todo cambio se hace aquí (commit y
+`git push` a `main`), y cada versión publicada en
+[PyPI](https://pypi.org/project/orange_gualbe_fs/) debe corresponder a un
+estado de `main` cuyo `version` en `pyproject.toml` sea el mismo número.
+
+Para publicar una versión nueva:
+
+1. Subir `version` en `pyproject.toml` y hacer commit.
+2. Regenerar la ayuda, construir y comprobar el paquete:
+
+   ```bash
+   rm -rf dist
+   python -m sphinx -b html doc orangecontrib/orange_gualbe_fs/_help/html
+   python -m pip install --upgrade build twine
+   python -m build
+   twine check dist/*
+   ```
+
+3. Subirlo a PyPI y publicar el commit:
+
+   ```bash
+   twine upload dist/*
+   git push origin main
+   ```
+
+`twine upload` usa las credenciales de `~/.pypirc` o te pide tu usuario
+(`__token__`) y tu API token de PyPI.
 
 ## Requisitos de los datos de entrada
 
@@ -108,3 +146,7 @@ edite un archivo `.rst` en `doc/widgets/`.
 - Si los datos tienen valores ausentes, imputa antes con el widget
   "Impute" de Orange: las funciones de puntuación de `scikit-learn` no
   admiten valores faltantes.
+
+## Licencia
+
+GPL-3.0-or-later. Véase el fichero [LICENSE](LICENSE).
