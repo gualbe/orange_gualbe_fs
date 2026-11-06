@@ -73,7 +73,10 @@ activas las funciones compatibles con ese tipo de problema:
      - Correlación lineal (F-test) entre cada atributo y el target.
    * - **r_regression**
      - Regresión
-     - Coeficiente de correlación de Pearson.
+     - Coeficiente de correlación de Pearson. Puntúa **con signo**: una
+       correlación negativa fuerte puntúa peor que una positiva débil.
+       Si te interesa la fuerza de la relación sin importar el signo, usa
+       **f_regression**.
 
 3. Resultado
 ------------
@@ -90,3 +93,7 @@ Notas importantes
 - Si hay valores ausentes, imputa antes con el widget "Impute" de Orange:
   las funciones de puntuación de scikit-learn no admiten valores
   faltantes.
+- **r_regression** no calcula p-valores, que necesitan **SelectFpr**,
+  **SelectFdr** y **SelectFwe**: con esa combinación el widget muestra un
+  error y no envía salida. Úsala con **SelectKBest** o
+  **SelectPercentile**, o elige otra función de puntuación.

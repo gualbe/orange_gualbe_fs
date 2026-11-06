@@ -174,6 +174,14 @@ class OWUnivariateSelection(OWWidget):
         _, method_cls, param_name = METHODS[self.method_index]
         _, score_func, _ = SCORES[self.scoring_index]
 
+        if param_name == "alpha" and score_func is r_regression:
+            self.Error.selection_failed(
+                "r_regression no calcula p-valores, que necesita este método: "
+                "elige K mejores o Percentil, u otra función de puntuación.")
+            self.info_label.setText("Ningún dato procesado todavía.")
+            self.Outputs.data.send(None)
+            return
+
         kwargs = {}
         if param_name == "k":
             kwargs["k"] = min(self.k, len(self.data.domain.attributes))
