@@ -7,3 +7,7 @@ dist/
 
 # Ayuda HTML generada con Sphinx a partir de doc/ (se reconstruye antes de cada build)
 orangecontrib/orange_gualbe_fs/_help/
+.venv/
+
+# Ajustes locales de Claude Code
+.claude/settings.local.json
