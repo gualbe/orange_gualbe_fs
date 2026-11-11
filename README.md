@@ -7,6 +7,7 @@
   <a href="https://github.com/gualbe/orange_gualbe_fs/actions/workflows/publish.yml"><img src="https://github.com/gualbe/orange_gualbe_fs/actions/workflows/publish.yml/badge.svg" alt="Estado de la publicación en PyPI"></a>
   <a href="https://github.com/gualbe/orange_gualbe_fs/blob/main/LICENSE"><img src="https://img.shields.io/badge/licencia-GPL--3.0--or--later-blue" alt="Licencia GPL-3.0-or-later"></a>
   <a href="https://orangedatamining.com/"><img src="https://img.shields.io/badge/Orange3-add--on-F7941D" alt="Add-on de Orange3"></a>
+  <a href="https://doi.org/10.5281/zenodo.24144443"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.24144443.svg" alt="DOI"></a>
 </p>
 
 Add-on para [Orange Data Mining](https://orangedatamining.com/) que añade
@@ -261,13 +262,16 @@ debes publicarla con otro nombre de paquete y de proyecto (que no contenga esos
 nombres), indicar que es una versión modificada de `orange_gualbe_fs` y no
 presentarla como oficial ni como obra del autor.
 
-**Cómo citar.** Si usas el add-on en un trabajo académico, cítalo con los
-metadatos de [`CITATION.cff`](https://github.com/gualbe/orange_gualbe_fs/blob/main/CITATION.cff)
+**Cómo citar.** Cita el add-on con su DOI general de Zenodo,
+[10.5281/zenodo.24144443](https://doi.org/10.5281/zenodo.24144443), que remite siempre a la última versión (cada
+release tiene además su propio DOI en Zenodo). Si usas el add-on en un trabajo
+académico, puedes tomar los metadatos de
+[`CITATION.cff`](https://github.com/gualbe/orange_gualbe_fs/blob/main/CITATION.cff)
 (GitHub ofrece «Cite this repository» con el formato APA o BibTeX), por ejemplo:
 
 > Asencio Cortés, G. (2026). *orange_gualbe_fs: add-on de selección de atributos
-> para Orange Data Mining* (versión 0.1.5) [Software].
-> https://github.com/gualbe/orange_gualbe_fs
+> para Orange Data Mining* (versión 0.1.5) [Software]. Zenodo.
+> https://doi.org/10.5281/zenodo.24144443
 
 **Componentes de terceros.** El add-on depende de Orange Data Mining (GPL-3.0 o
 posterior, Bioinformatics Laboratory, Universidad de Liubliana) y de

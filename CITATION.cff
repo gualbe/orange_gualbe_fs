@@ -12,6 +12,7 @@ authors:
 version: "0.1.5"
 date-released: "2026-11-11"
 license: GPL-3.0-or-later
+doi: "10.5281/zenodo.24144443"
 repository-code: "https://github.com/gualbe/orange_gualbe_fs"
 url: "https://pypi.org/project/orange-gualbe-fs/"
 keywords:
