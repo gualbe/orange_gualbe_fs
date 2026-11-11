@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "orange_gualbe_fs"
-version = "0.1.4"
+version = "0.1.5"
 description = "Add-on de seleccion de atributos (feature selection) para Orange Data Mining"
 readme = "README.md"
 requires-python = ">=3.9"

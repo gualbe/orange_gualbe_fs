@@ -266,7 +266,7 @@ metadatos de [`CITATION.cff`](https://github.com/gualbe/orange_gualbe_fs/blob/ma
 (GitHub ofrece «Cite this repository» con el formato APA o BibTeX), por ejemplo:
 
 > Asencio Cortés, G. (2026). *orange_gualbe_fs: add-on de selección de atributos
-> para Orange Data Mining* (versión 0.1.4) [Software].
+> para Orange Data Mining* (versión 0.1.5) [Software].
 > https://github.com/gualbe/orange_gualbe_fs
 
 **Componentes de terceros.** El add-on depende de Orange Data Mining (GPL-3.0 o
