@@ -11,3 +11,9 @@ Documentación de los widgets del add-on de selección de atributos
    widgets/univariateselection
    widgets/wrapperselection
    widgets/embeddedselection
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Acerca de
+
+   licencia

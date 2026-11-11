@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Si usas este software, cítalo con los metadatos de este fichero."
+type: software
+title: "orange_gualbe_fs: add-on de selección de atributos para Orange Data Mining"
+abstract: >-
+  Add-on de Orange Data Mining con widgets de selección de atributos
+  (feature selection) basados en scikit-learn: filtro univariante,
+  selección wrapper y selección embebida.
+authors:
+  - family-names: "Asencio Cortés"
+    given-names: "Gualberto"
+version: "0.1.4"
+date-released: "2026-11-11"
+license: GPL-3.0-or-later
+repository-code: "https://github.com/gualbe/orange_gualbe_fs"
+url: "https://pypi.org/project/orange-gualbe-fs/"
+keywords:
+  - "Orange Data Mining"
+  - "orange3 add-on"
+  - "feature selection"
+  - "scikit-learn"

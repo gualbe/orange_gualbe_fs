@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Copyright (C) 2026 Gualberto Asencio Cortés
+# Part of orange_gualbe_fs. See the LICENSE and NOTICE files for details.
+
 """Genera las imágenes del README (assets/*.svg y, con --capturas, assets/*.png).
 
 Uso (desde la raíz del repo, con Orange3 y PyQt5 instalados):

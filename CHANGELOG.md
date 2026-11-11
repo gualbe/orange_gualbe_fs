@@ -3,6 +3,25 @@
 Cada versión se publica a la vez en GitHub (release `vX.Y.Z`) y en
 [PyPI](https://pypi.org/project/orange-gualbe-fs/).
 
+## 0.1.4 (2026-11-11)
+
+- Autoría y licencia reforzadas, sin cambiar de licencia (sigue siendo
+  GPL-3.0-or-later):
+  - Cabecera SPDX con el copyright de Gualberto Asencio Cortés en todos los
+    ficheros `.py`.
+  - Nuevo fichero `NOTICE` con la autoría, la licencia y los términos adicionales
+    del artículo 7 de la GPL-3 (atribución, marcado de las versiones modificadas
+    y nombres «orange_gualbe», «Orange Gualbe» y «Gualbe» reservados), y los
+    componentes de terceros.
+  - Nuevo fichero `CITATION.cff` para citar el add-on.
+  - El paquete declara la licencia con la sintaxis SPDX (PEP 639) e incluye
+    `LICENSE` y `NOTICE` en el wheel y en el sdist; el autor figura con su
+    nombre completo.
+  - README: la sección «Licencia» pasa a «Licencia y autoría», con la política
+    de nombres para forks y cómo citar.
+  - Ayuda (F1): página «Licencia y autoría» y copyright del autor en el pie.
+- Sin cambios funcionales en los widgets.
+
 ## 0.1.3 (2026-11-06)
 
 - Página inicial renovada (GitHub y PyPI): banner, insignias, comparación visual

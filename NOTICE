@@ -1,0 +1,78 @@
+orange_gualbe_fs
+Feature selection add-on for Orange Data Mining
+https://github.com/gualbe/orange_gualbe_fs
+
+Copyright (C) 2026 Gualberto Asencio Cortés
+
+Author: Gualberto Asencio Cortés
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option) any
+later version (SPDX: GPL-3.0-or-later).
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+The full text of the license is in the LICENSE file distributed with this
+program, and at <https://www.gnu.org/licenses/>.
+
+
+Additional terms under section 7 of the GNU GPL v3
+--------------------------------------------------
+
+The following additional terms apply, as permitted by section 7 of the GNU
+General Public License version 3, to the material in this program for which
+Gualberto Asencio Cortés holds the copyright. They do not apply to the
+third-party components listed at the end of this file.
+
+1. Preservation of author attributions (section 7(b)).
+   All copies and modified versions of this material, in whole or in part,
+   must preserve the copyright notice and the attribution of authorship to
+   Gualberto Asencio Cortés contained in the source files, in the
+   documentation and in this NOTICE file.
+
+2. Origin and marking of modified versions (section 7(c)).
+   The origin of this material must not be misrepresented. Modified versions
+   must be marked in reasonable ways as different from the original version,
+   and must not be presented as the original orange_gualbe_fs add-on or as
+   being published or endorsed by its author.
+
+3. Names (section 7(e)).
+   No rights are granted under trademark law, or otherwise, to use the names
+   "orange_gualbe", "Orange Gualbe" or "Gualbe". As a reasonable way of
+   marking a modified version as different from the original (section 7(c)),
+   anyone who distributes a modified version must use a package name and a
+   project name that differ from those of the original and do not contain
+   these names.
+
+These additional terms are part of the license of this material. As required
+by sections 4 and 5 of the GNU GPL v3, anyone who conveys this material or a
+modified version of it must keep intact this NOTICE file and the notices in
+the source files that refer to it.
+
+
+Third-party components
+----------------------
+
+This add-on runs on Orange Data Mining and scikit-learn, which are
+dependencies installed separately and are not included in this package:
+
+- Orange Data Mining (Orange3), Copyright (C) Bioinformatics Laboratory,
+  Faculty of Computer and Information Science, University of Ljubljana.
+  Licensed under the GNU General Public License, version 3 or later.
+  <https://orangedatamining.com/>
+- scikit-learn, Copyright (C) the scikit-learn developers.
+  Licensed under the BSD 3-Clause License. <https://scikit-learn.org/>
+
+The widgets of this add-on import and subclass Orange classes (such as
+OWWidget). No source code from Orange or from other projects has been copied
+into this package.
+
+The diagrams in the assets/ folder of the repository, which illustrate the
+README and are not included in the distributed package, embed widget icons
+from Orange Data Mining (File, Impute, Data Table, Test and Score and
+Logistic Regression). Those icons belong to the Bioinformatics Laboratory,
+University of Ljubljana, and are distributed under the GNU General Public
+License, version 3 or later, as part of Orange.

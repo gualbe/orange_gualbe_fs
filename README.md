@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://pypi.org/project/orange-gualbe-fs/"><img src="https://img.shields.io/pypi/v/orange-gualbe-fs?label=PyPI&color=FFA85C" alt="Versión en PyPI"></a>
   <a href="https://github.com/gualbe/orange_gualbe_fs/actions/workflows/publish.yml"><img src="https://github.com/gualbe/orange_gualbe_fs/actions/workflows/publish.yml/badge.svg" alt="Estado de la publicación en PyPI"></a>
-  <a href="https://github.com/gualbe/orange_gualbe_fs/blob/main/LICENSE"><img src="https://img.shields.io/badge/licencia-GPL--3.0-blue" alt="Licencia GPL-3.0"></a>
+  <a href="https://github.com/gualbe/orange_gualbe_fs/blob/main/LICENSE"><img src="https://img.shields.io/badge/licencia-GPL--3.0--or--later-blue" alt="Licencia GPL-3.0-or-later"></a>
   <a href="https://orangedatamining.com/"><img src="https://img.shields.io/badge/Orange3-add--on-F7941D" alt="Add-on de Orange3"></a>
 </p>
 
@@ -232,9 +232,46 @@ Como plan B, si GitHub Actions no estuviera disponible, se puede construir
 (`python -m build`, tras regenerar la ayuda como se explica arriba) y
 subir a mano con `twine upload dist/*`.
 
-## Licencia
+## Licencia y autoría
 
-[GPL-3.0-or-later](https://github.com/gualbe/orange_gualbe_fs/blob/main/LICENSE).
-Los iconos de Orange que aparecen en los esquemas pertenecen a sus autores
-(Bioinformatics Lab, Universidad de Liubliana) y se distribuyen también
-bajo GPL-3.0.
+**Autor:** Gualberto Asencio Cortés · Copyright © 2026.
+
+`orange_gualbe_fs` es software libre bajo la licencia
+[GPL-3.0-or-later](https://github.com/gualbe/orange_gualbe_fs/blob/main/LICENSE)
+(GNU GPL versión 3 o posterior), la misma familia de licencia que Orange, del que
+el add-on importa y hereda clases.
+
+Además, al amparo del artículo 7 de la GPL-3, el fichero
+[`NOTICE`](https://github.com/gualbe/orange_gualbe_fs/blob/main/NOTICE) añade
+unos términos adicionales que se aplican al material del autor:
+
+- **Atribución (7 b):** toda copia o versión modificada, completa o parcial, debe
+  conservar el aviso de copyright y la atribución de autoría a Gualberto Asencio
+  Cortés en los ficheros fuente, en la documentación y en `NOTICE`.
+- **Origen y versiones modificadas (7 c):** no se puede falsear el origen del
+  material; las versiones modificadas deben marcarse como distintas del original
+  y no pueden presentarse como el add-on original ni como publicadas o
+  respaldadas por su autor.
+- **Nombres (7 e):** no se concede ningún derecho sobre los nombres
+  «orange_gualbe», «Orange Gualbe» ni «Gualbe».
+
+**Forks y versiones derivadas.** Puedes estudiar, modificar y redistribuir el
+código en los términos de la GPL-3, pero si distribuyes una versión modificada
+debes publicarla con otro nombre de paquete y de proyecto (que no contenga esos
+nombres), indicar que es una versión modificada de `orange_gualbe_fs` y no
+presentarla como oficial ni como obra del autor.
+
+**Cómo citar.** Si usas el add-on en un trabajo académico, cítalo con los
+metadatos de [`CITATION.cff`](https://github.com/gualbe/orange_gualbe_fs/blob/main/CITATION.cff)
+(GitHub ofrece «Cite this repository» con el formato APA o BibTeX), por ejemplo:
+
+> Asencio Cortés, G. (2026). *orange_gualbe_fs: add-on de selección de atributos
+> para Orange Data Mining* (versión 0.1.4) [Software].
+> https://github.com/gualbe/orange_gualbe_fs
+
+**Componentes de terceros.** El add-on depende de Orange Data Mining (GPL-3.0 o
+posterior, Bioinformatics Laboratory, Universidad de Liubliana) y de
+scikit-learn (BSD-3-Clause), que se instalan aparte. Los iconos de Orange que
+aparecen en los esquemas de este README pertenecen a sus autores y se
+distribuyen bajo GPL-3.0 o posterior como parte de Orange. No se ha copiado
+código de Orange ni de otros proyectos.
